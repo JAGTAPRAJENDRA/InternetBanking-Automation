@@ -2,7 +2,7 @@ name: Run Internet Banking Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -28,12 +28,11 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y google-chrome-stable
 
       - name: Run Tests
-        working-directory: InternetBanking
-        run: mvn clean test
+        run: mvn clean test   # ✅ FIXED (no working-directory)
 
       - name: Upload Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Test-Report
-          path: InternetBanking/target/
+          path: target/   # ✅ FIXED
