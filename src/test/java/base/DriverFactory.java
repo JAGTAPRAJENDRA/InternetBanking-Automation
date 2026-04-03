@@ -2,6 +2,7 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
@@ -21,15 +22,30 @@ public class DriverFactory {
         // If browser is chrome
         if (browserName.equalsIgnoreCase("chrome")) {
 
-            // Automatically download and setup ChromeDriver
             WebDriverManager.chromedriver().setup();
 
+            ChromeOptions options = new ChromeOptions();
+
+            // ✅ Detect CI environment (GitHub Actions)
+            String ci = System.getenv("CI");
+
+            if (ci != null) {
+                options.addArguments("--headless=new");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--window-size=1920,1080");
+            }
+
             // Open Chrome browser
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
         }
 
-        // Maximize browser
-        driver.manage().window().maximize();
+        // Maximize browser (only if not headless)
+        try {
+            driver.manage().window().maximize();
+        } catch (Exception e) {
+            // Ignore for headless
+        }
 
         // Implicit wait
         driver.manage().timeouts()
