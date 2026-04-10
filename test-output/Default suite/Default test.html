@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 09 19:18:47 IST 2026</td>
+<td>Started on:</td><td>Sun Apr 05 12:12:38 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>324 seconds (324103 ms)</td>
+<tr><td>Total time:</td><td>295 seconds (295473 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,32 +77,58 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login fails with invalid OTP", "PSB Login with Two Factor Authentication"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: otppassword1 (tried for 15 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-akh-c92=&quot;&quot; tabindex=&quot;0&quot; class=&quot;ux-button primary sm-mob otp-submit&quot;&gt;...&lt;/button&gt; is not clickable at point (640, 440). Other element would receive the click: &lt;div _ngcontent-akh-c51=&quot;&quot; id=&quot;pageLoader&quot; role=&quot;status&quot; aria-live=&quot;polite&quot; class=&quot;loading-backdrop&quot; style=&quot;opacity: 0.0209636;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=146.0.7680.178)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64194}, goog:processID: 15564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64194/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f7402aee2e7e974c8902e943f726e278
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.login.OtpPage.enterInvalidOtp(OtpPage.java:63)
-	at stepdefinitions.OtpSteps.user_enters_invalid_otp(OtpSteps.java:81)
-	at ✽.user enters invalid otp(file:///C:/Users/Admin/git/repository/InternetBanking/src/test/resources/features/login/Login.feature:22)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2098556815", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2098556815'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: otppassword1 (tried for 15 second(s) with 500 milliseconds interval)
+Command: [9a8e958bd029b951dc6ef78523fdccb9, clickElement {id=f.0981CD38AE40CA1AC0B8DCAAD8431A55.d.BE6EC83EEBE215003BD0B972E9BAA2D4.e.96}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49329}, goog:processID: 15328, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49329/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a8e958bd029b951dc6ef78523fdccb9)] -&gt; xpath: //button[contains(text(),&apos;Submit&apos;)]]
+Session ID: 9a8e958bd029b951dc6ef78523fdccb9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.login.OtpPage.submitOtp(OtpPage.java:79)
+	at stepdefinitions.OtpSteps.user_clicks_submit_otp(OtpSteps.java:51)
+	at ✽.user clicks submit otp(file:///C:/Selenium%20project/InternetBanking/src/test/resources/features/login/Login.feature:23)
+</pre></div><a href='#' onClick='toggleBox("stack-trace984302294", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace984302294'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-akh-c92=&quot;&quot; tabindex=&quot;0&quot; class=&quot;ux-button primary sm-mob otp-submit&quot;&gt;...&lt;/button&gt; is not clickable at point (640, 440). Other element would receive the click: &lt;div _ngcontent-akh-c51=&quot;&quot; id=&quot;pageLoader&quot; role=&quot;status&quot; aria-live=&quot;polite&quot; class=&quot;loading-backdrop&quot; style=&quot;opacity: 0.0209636;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=146.0.7680.178)
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64194}, goog:processID: 15564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64194/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f7402aee2e7e974c8902e943f726e278
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.login.OtpPage.enterInvalidOtp(OtpPage.java:63)
-	at stepdefinitions.OtpSteps.user_enters_invalid_otp(OtpSteps.java:81)
-	at ✽.user enters invalid otp(file:///C:/Users/Admin/git/repository/InternetBanking/src/test/resources/features/login/Login.feature:22)
+Command: [9a8e958bd029b951dc6ef78523fdccb9, clickElement {id=f.0981CD38AE40CA1AC0B8DCAAD8431A55.d.BE6EC83EEBE215003BD0B972E9BAA2D4.e.96}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49329}, goog:processID: 15328, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49329/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a8e958bd029b951dc6ef78523fdccb9)] -&gt; xpath: //button[contains(text(),&apos;Submit&apos;)]]
+Session ID: 9a8e958bd029b951dc6ef78523fdccb9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.login.OtpPage.submitOtp(OtpPage.java:79)
+	at stepdefinitions.OtpSteps.user_clicks_submit_otp(OtpSteps.java:51)
+	at ✽.user clicks submit otp(file:///C:/Selenium%20project/InternetBanking/src/test/resources/features/login/Login.feature:23)
 </pre></div></td>
-<td>115</td>
-<td>runner.TestRunner@5aebe890</td></tr>
+<td>90</td>
+<td>runner.TestRunner@5b94b04d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -115,13 +141,13 @@ Session ID: f7402aee2e7e974c8902e943f726e278
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid OTP", "PSB Login with Two Factor Authentication"</td>
 <td></td>
-<td>114</td>
-<td>runner.TestRunner@5aebe890</td></tr>
+<td>111</td>
+<td>runner.TestRunner@5b94b04d</td></tr>
 <tr>
 <td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "OTP expired and resend option should be enabled", "PSB Login with Two Factor Authentication"</td>
 <td></td>
 <td>92</td>
-<td>runner.TestRunner@5aebe890</td></tr>
+<td>runner.TestRunner@5b94b04d</td></tr>
 </table><p>
 </body>
 </html>
